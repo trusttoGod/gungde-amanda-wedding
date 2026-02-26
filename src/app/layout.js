@@ -7,7 +7,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata = {
-  title: "Aryasatya & Amanda Wedding",
+  title: "Gungde & Amanda Wedding",
   description: "Undangan Pernikahan Digital",
 }
 
