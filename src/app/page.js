@@ -11,10 +11,10 @@ import HeroSection from "./components/HeroSection"
 import GallerySection from "./components/GallerySection"
 import FadeInSection from "./components/FadeInSection"
 import ClosingSection from "./components/ClosingSection"
+import { Suspense } from "react"
+import GuestName from "./components/GuestName"
 
 export default function Home() {
-  const searchParams = useSearchParams()
-  const guest = searchParams.get("to") || "Tamu Undangan"
   const [opened, setOpened] = useState(false)
 
   if (!opened) {
@@ -33,9 +33,9 @@ export default function Home() {
           Kepada Yth.
         </p>
 
-        <p className="text-2xl text-[#C6A75E] font-semibold mt-2 mb-12">
-          {guest}
-        </p>
+        <Suspense fallback={<p className="text-2xl text-[#C6A75E] font-semibold mt-2 mb-12">Tamu Undangan</p>}>
+          <GuestName />
+        </Suspense>
 
         <FadeInSection>
           <Countdown />
