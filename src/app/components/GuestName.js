@@ -7,7 +7,7 @@ export default function GuestName() {
   const guest = searchParams.get("to")
 
   return (
-    <p className="text-lg text-[#C6A75E] mt-2">
+    <p className="text-2xl text-[#C6A75E] mt-2">
       {guest ? decodeURIComponent(guest) : "Tamu Undangan"}
     </p>
   )

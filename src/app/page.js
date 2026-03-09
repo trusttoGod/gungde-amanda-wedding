@@ -30,14 +30,6 @@ export default function Home() {
       {/* CONTENT AFTER HERO */}
       <main className="bg-[#F8F3E7] text-center py-16 px-5">
 
-        <p className="text-lg text-[#3A2E2A]">
-          Kepada Yth.
-        </p>
-        
-        <Suspense fallback={<p className="text-2xl text-[#C6A75E] font-semibold mt-2 mb-12">Tamu Undangan</p>}>
-          <GuestName />
-        </Suspense>
-
         
           <FadeInSection>
             <Countdown />
