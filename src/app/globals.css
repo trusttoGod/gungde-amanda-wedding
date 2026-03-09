@@ -47,3 +47,22 @@ html {
   50% { transform: scale(1.1); }
   100% { transform: scale(1.05); }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Snap hanya untuk section tertentu */
+.snap-section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+}
+
+/* Wrapper snap container */
+.snap-container {
+  scroll-snap-type: y proximity;
+}

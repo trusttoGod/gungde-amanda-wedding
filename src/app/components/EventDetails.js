@@ -1,54 +1,52 @@
+"use client"
+import { useSearchParams } from "next/navigation"
+
 export default function EventDetails() {
+  const searchParams = useSearchParams()
+  const event = searchParams.get("event")
+
+  const show24 = event === "24"
+  const show25 = event === "25"
+  const showAll = !event
+
   return (
-    <section className="mt-20 max-w-3xl mx-auto text-center">
+    <section className="bg-[#F8F3E7] py-20 px-6">
+      <div className="max-w-3xl mx-auto text-center">
+        <h2 className="text-3xl font-serif text-[#3A2E2A] mb-12">
+          Detail Acara
+        </h2>
 
-      <h2 className="text-2xl md:text-3xl text-[#3A2E2A] mb-10 tracking-widest">
-        Detail Acara
-      </h2>
+        <div className="space-y-8">
 
-      <div className="grid md:grid-cols-2 gap-10">
+          {(show24 || showAll) && (
+            <div className="border border-[#C6A75E] p-8 rounded-2xl shadow-lg bg-white">
+              <h3 className="text-xl font-semibold text-[#C6A75E] mb-4">
+                Resepsi Internal
+              </h3>
+              <p className="text-lg text-[#3A2E2A]">
+                24 Maret 2026
+              </p>
+              <p className="italic mt-2 text-[#3A2E2A]">
+                Jam akan diinformasikan
+              </p>
+            </div>
+          )}
 
-      {/* Resepsi */}
-      <div className="border border-[#C6A75E] p-8 rounded-2xl shadow-lg bg-white text-center">
+          {(show25 || showAll) && (
+            <div className="border border-[#C6A75E] p-8 rounded-2xl shadow-lg bg-white">
+              <h3 className="text-xl font-semibold text-[#C6A75E] mb-4">
+                Pawiwahan & Resepsi Umum
+              </h3>
+              <p className="text-lg text-[#3A2E2A]">
+                25 Maret 2026
+              </p>
+              <p className="italic mt-2 text-[#3A2E2A]">
+                Jam akan diinformasikan
+              </p>
+            </div>
+          )}
 
-        <h3 className="text-lg md:text-xl font-semibold text-[#C6A75E]">
-          Resepsi
-        </h3>
-
-        {/* 👑 Royal Divider */}
-        <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#C6A75E] to-transparent mx-auto my-4"></div>
-
-        <p className="text-base md:text-lg text-[#3A2E2A]">
-          24 Maret 2026
-        </p>
-
-        <p className="text-sm md:text-base italic tracking-wide text-[#3A2E2A] mt-2">
-          Pkl 09.00 WITA - 21.00 WITA
-        </p>
-
-      </div>
-
-
-      {/* Pawiwahan */}
-      <div className="border border-[#C6A75E] p-8 rounded-2xl shadow-lg bg-white text-center">
-
-        <h3 className="text-lg md:text-xl font-semibold text-[#C6A75E]">
-          Upacara Pawiwahan
-        </h3>
-
-        {/* 👑 Royal Divider */}
-        <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#C6A75E] to-transparent mx-auto my-4"></div>
-
-        <p className="text-base md:text-lg text-[#3A2E2A]">
-          25 Maret 2026
-        </p>
-
-        <p className="text-sm md:text-base italic tracking-wide text-[#3A2E2A] mt-2">
-          Pkl 16.00 WITA - Selesai
-        </p>
-
-      </div>
-
+        </div>
       </div>
     </section>
   )

@@ -13,6 +13,7 @@ import FadeInSection from "./components/FadeInSection"
 import ClosingSection from "./components/ClosingSection"
 import { Suspense } from "react"
 import GuestName from "./components/GuestName"
+import WeddingGift from "./components/WeddingGift"
 
 export default function Home() {
   const [opened, setOpened] = useState(false)
@@ -32,35 +33,38 @@ export default function Home() {
         <p className="text-lg text-[#3A2E2A]">
           Kepada Yth.
         </p>
-
+        
         <Suspense fallback={<p className="text-2xl text-[#C6A75E] font-semibold mt-2 mb-12">Tamu Undangan</p>}>
           <GuestName />
         </Suspense>
 
-        <FadeInSection>
-          <Countdown />
-        </FadeInSection>
-
-        <FadeInSection>
-          <GallerySection />
-        </FadeInSection>
-
-        <FadeInSection>
-          <EventDetails />
-        </FadeInSection>
-
-        <FadeInSection>
-          <LocationSection />
-        </FadeInSection>
-
-        <FadeInSection>
-          <RSVPForm />
-        </FadeInSection>
         
+          <FadeInSection>
+            <Countdown />
+          </FadeInSection>
+          <FadeInSection>
+            <GallerySection />
+          </FadeInSection>
+          <FadeInSection>
+            <EventDetails />
+          </FadeInSection>
+          <FadeInSection>
+            <LocationSection />
+          </FadeInSection>
+          <FadeInSection>
+            <WeddingGift />
+          </FadeInSection>
+          <FadeInSection>
+            <RSVPForm />
+          </FadeInSection>
+          
+       
       </main>
+      
       <FadeInSection>
           <ClosingSection />
       </FadeInSection>
+      
       <MusicPlayer play={opened} />
     </>
   )
