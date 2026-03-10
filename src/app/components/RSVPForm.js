@@ -197,14 +197,14 @@ export default function RSVPForm() {
 
         {event === "24" && (
           <div className="w-full border border-[#C6A75E] p-3 rounded-lg bg-[#F8F3E7] text-black font-semibold">
-            24 Maret 2026 – Resepsi Internal
+            24 Maret 2026 – Resepsi 
           </div>
         )}
 
 
         {event === "25" && (
           <div className="w-full border border-[#C6A75E] p-3 rounded-lg bg-[#F8F3E7] text-black font-semibold">
-            25 Maret 2026 – Pawiwahan & Resepsi Umum
+            25 Maret 2026 – Pawiwahan
           </div>
         )}
 
