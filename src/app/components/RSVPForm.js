@@ -181,11 +181,11 @@ export default function RSVPForm() {
             onChange={(e)=>setDate(e.target.value)}
           >
             <option value="24 Maret 2026">
-              24 Maret 2026 – Resepsi Internal
+              24 Maret 2026 – Resepsi 
             </option>
 
             <option value="25 Maret 2026">
-              25 Maret 2026 – Pawiwahan & Resepsi Umum
+              25 Maret 2026 – Pawiwahan
             </option>
 
             <option value="24 & 25 Maret 2026">
