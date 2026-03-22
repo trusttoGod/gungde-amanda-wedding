@@ -52,7 +52,7 @@ export default function WeddingGift() {
           </p>
 
           <button
-            onClick={() => copyRek("1234567890")}
+            onClick={() => copyRek("1450018259594")}
             className="bg-[#C6A75E] text-white px-4 py-2 rounded-lg hover:opacity-90"
           >
             Copy Rekening
@@ -78,7 +78,7 @@ export default function WeddingGift() {
           </p>
 
           <button
-            onClick={() => copyRek("9876543210")}
+            onClick={() => copyRek("2360677489")}
             className="bg-[#C6A75E] text-white px-4 py-2 rounded-lg hover:opacity-90"
           >
             Copy Rekening
